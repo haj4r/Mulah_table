@@ -29,7 +29,7 @@
 
         // Load bundled CSV
         window.addEventListener("DOMContentLoaded", () => {
-            Papa.parse("/Applications/XAMPP/xamppfiles/htdocs/Mulah_table/Table_Input.csv", {
+            Papa.parse("/Table_Input.csv", {
                 download: true,
                 complete: function (results) {
                     tableData = results.data;
