@@ -1,0 +1,110 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1f2937;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+  color: #374151;
+  border-left: 4px solid #3b82f6;
+  padding-left: 0.5rem;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background: white;
+}
+
+thead {
+  background: #f3f4f6;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+td {
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f9;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  td {
+    padding: 0.75rem;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #374151;
+  }
+}
